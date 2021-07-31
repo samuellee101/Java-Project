@@ -1,0 +1,2 @@
+rootProject.name = "Cost_Database_UI"
+include ':app'

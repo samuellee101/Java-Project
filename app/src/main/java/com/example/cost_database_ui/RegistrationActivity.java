@@ -32,6 +32,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 String RegName = RegisterName.getText().toString();
                 String RegPass = RegisterPass.getText().toString();
 
+                //call Credentials because this is where credentials are stored/going to be stored
                 if (validate(RegName,RegPass)==true)
                 {
                     credentials = new Credentials(RegName,RegPass);

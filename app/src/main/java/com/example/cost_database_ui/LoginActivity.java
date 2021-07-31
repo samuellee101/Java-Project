@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                 String inputName = eName.getText().toString();
                 String inputPassword = ePassword.getText().toString();
 
+                //check that user actually input something
                 if (inputName.isEmpty() || inputPassword.isEmpty())
                 {
                     Toast.makeText(LoginActivity.this,"Please enter both a username and a password.",Toast.LENGTH_SHORT).show();
@@ -56,6 +57,8 @@ public class LoginActivity extends AppCompatActivity {
                 {
                         valid = validate(inputName,inputPassword);
 
+                        //we don't want unauthorized users accessing the data so we limit the amount of
+                        //unsuccessful attempts
                         if (!valid)
                         {
                             counter--;
